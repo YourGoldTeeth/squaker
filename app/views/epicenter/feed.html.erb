@@ -1,0 +1,19 @@
+<h1> <%= current_user.name %>'s Squaker feed </h1>
+<p>below are your desired peer's insignificant and petty opinions:</p>
+
+<div>
+	<% @following_tweets.each do |tweet|  %>
+		<div>
+			<p>
+				
+				<%= tweet.user.username %>
+			</p>
+
+			<p>
+				
+				<%= tweet.message.html_safe %>
+
+			</p>
+		</div>
+	<% end %>
+</div>
