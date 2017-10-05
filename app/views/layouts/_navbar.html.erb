@@ -29,6 +29,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'New Tweet', new_tweet_path, {class: 'btn btn-success', style: 'margin-right: 1em'} %></li>
         <%if current_user  %>
           <% if current_user.avatar.url  %>
             <li><%= image_tag current_user.avatar.url, {style: 'height: 30px; margin-top: .5em;', class: 'img-responsive'}%></li>

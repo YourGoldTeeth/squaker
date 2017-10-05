@@ -18,7 +18,7 @@
         <% @tweets.each do |tweet| %>
           <tr>
             <td><%= tweet.id%></td>
-            <td><%= tweet.message %></td>
+            <td><%= tweet.message.html_safe %></td>
             <td><%= link_to tweet.user.username, show_user_path(id: tweet.user_id) %></td>
             <td><%= link_to 'Show', tweet %></td>
             <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
@@ -27,14 +27,8 @@
         <% end %>
       </tbody>
     </table>
+    <%= link_to 'New Tweet', new_tweet_path %>
   </div>  
 </div>
 <br>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-1">
-      <%= link_to 'New Tweet', new_tweet_path %>
-    </div>  
-  </div>  
-</div>    
+    
