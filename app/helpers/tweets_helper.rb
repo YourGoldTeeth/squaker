@@ -18,5 +18,6 @@ module TweetsHelper
 	    end
 
 	    tweet.update(message: message_array.join(" "))
+	    tweet
 	end
 end
